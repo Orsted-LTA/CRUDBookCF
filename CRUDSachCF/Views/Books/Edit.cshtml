@@ -1,0 +1,49 @@
+﻿@model CRUDSachCF.Models.Book
+
+<div class="container mt-5">
+    <!-- Header -->
+    <h1 class="text-center mb-4">Chỉnh sửa thông tin sách</h1>
+
+    <!-- Card UI -->
+    <div class="card p-4 shadow-sm">
+        <!-- Form -->
+        <form asp-action="Edit" enctype="multipart/form-data" method="post">
+            <input type="hidden" asp-for="ID" />
+
+            <!-- Tiêu đề sách -->
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label">Tiêu đề sách</label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+
+            <!-- Tác giả -->
+            <div class="mb-3">
+                <label asp-for="Author" class="form-label">Tác giả</label>
+                <input asp-for="Author" class="form-control" />
+            </div>
+
+            <!-- Giá -->
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label">Giá</label>
+                <input asp-for="Price" class="form-control" />
+            </div>
+
+            <!-- Mô tả -->
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Mô tả</label>
+                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+            </div>
+
+            <!-- Hình ảnh mới -->
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label">Hình ảnh mới</label>
+                <input asp-for="ImageFile" class="form-control" type="file" />
+            </div>
+
+            <!-- Nút cập nhật thông tin -->
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary btn-lg">Cập nhật thông tin</button>
+            </div>
+        </form>
+    </div>
+</div>
